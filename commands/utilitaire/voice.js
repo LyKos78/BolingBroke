@@ -47,7 +47,7 @@ module.exports = {
 
         const embed = new EmbedBuilder()
             .setTitle(`Statistiques Vocales - ${message.guild.name}`)
-            .setColor(config.color)
+            .setColor(client.config.color)
             .setDescription(`
 🎙️ **En vocal :** ${connected}
 🔇 **Micro coupé :** ${mutedMic}

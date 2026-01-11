@@ -30,7 +30,7 @@ module.exports = {
 
             return new EmbedBuilder()
                 .setTitle(`Liste des serveurs (${guilds.length})`)
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .setDescription(desc || "Vide")
                 .setFooter({ text: `Page ${curr + 1}/${Math.ceil(guilds.length / itemsPerPage)}` });
         };

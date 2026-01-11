@@ -11,7 +11,7 @@ module.exports = {
         const getEmbed = () => {
             return new EmbedBuilder()
                 .setTitle("Configuration Départs (Leave)")
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .addFields(
                     {
                         name: "Salon d'au revoir",

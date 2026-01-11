@@ -44,7 +44,7 @@ module.exports = {
                     const uid = e.ID.split('_')[2];
                     return `${start + i + 1}) <@${uid}> (${uid})`;
                 }).join("\n");
-                return new EmbedBuilder().setTitle("Blacklist").setColor(config.color).setDescription(desc).setFooter({ text: `Page ${curr + 1}` });
+                return new EmbedBuilder().setTitle("Blacklist").setColor(client.config.color).setDescription(desc).setFooter({ text: `Page ${curr + 1}` });
             };
 
             const row = new ActionRowBuilder().addComponents(

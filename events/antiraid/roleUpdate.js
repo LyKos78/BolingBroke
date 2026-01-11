@@ -43,7 +43,7 @@ module.exports = async (client, oldRole, newRole) => {
 
             if (raidlog) {
                 const embed = new EmbedBuilder()
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setDescription(`<@${executor.id}> a modifié le rôle **${oldRole.name}**, il a été **${sanction}** et les modifications annulées !`);
                 raidlog.send({ embeds: [embed] }).catch(() => { });
             }

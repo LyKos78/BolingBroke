@@ -16,7 +16,7 @@ module.exports = {
         const embed = new EmbedBuilder()
             .setTitle(guild.name)
             .setThumbnail(guild.iconURL({ dynamic: true }))
-            .setColor(config.color)
+            .setColor(client.config.color)
             .addFields(
                 { name: "👑 Propriétaire", value: `<@${guild.ownerId}>`, inline: true },
                 { name: "🆔 ID", value: guild.id, inline: true },

@@ -24,7 +24,7 @@ module.exports = {
         const embed = new EmbedBuilder()
             .setTitle("Menu de Rôle")
             .setDescription(`Cliquez ci-dessous pour obtenir/retirer le rôle ${role}`)
-            .setColor(config.color);
+            .setColor(client.config.color);
 
         const row = new ActionRowBuilder().addComponents(
             new ButtonBuilder()

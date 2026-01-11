@@ -41,7 +41,7 @@ module.exports = async (client, oldChannel, newChannel) => {
 
             if (raidlog) {
                 const embed = new EmbedBuilder()
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setDescription(`<@${executor.id}> a modifié le salon \`${oldChannel.name}\`, il a été **${sanction}** et les modifs annulées !`);
                 raidlog.send({ embeds: [embed] }).catch(() => { });
             }

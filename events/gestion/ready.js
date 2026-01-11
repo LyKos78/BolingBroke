@@ -58,7 +58,7 @@ module.exports = async (client) => {
                 );
 
                 const embed = new EmbedBuilder()
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setImage(avatarUrl)
                     .setFooter({ text: `Gif de ${userWithGif.tag}` });
 
@@ -81,7 +81,7 @@ module.exports = async (client) => {
                 );
 
                 const embed = new EmbedBuilder()
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setImage(avatarUrl)
                     .setFooter({ text: `Avatar de ${user.tag}` });
 
@@ -108,7 +108,7 @@ module.exports = async (client) => {
                     );
 
                     const embed = new EmbedBuilder()
-                        .setColor(config.color)
+                        .setColor(client.config.color)
                         .setImage(bannerUrl)
                         .setFooter({ text: `Bannière de ${user.tag}` });
 

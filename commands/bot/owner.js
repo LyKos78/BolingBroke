@@ -48,7 +48,7 @@ module.exports = {
 
                 return new EmbedBuilder()
                     .setTitle("Liste des Owners")
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setDescription(description || "Aucune donnée.")
                     .setFooter({ text: `Page ${currentPage + 1}/${Math.ceil(data.length / itemsPerPage)}` });
             };

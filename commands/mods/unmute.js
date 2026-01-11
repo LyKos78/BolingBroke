@@ -23,7 +23,7 @@ module.exports = {
 
         const logChannel = message.guild.channels.cache.get(db.get(`logmod_${message.guild.id}`));
         if (logChannel) {
-            const embed = new EmbedBuilder().setColor(config.color).setDescription(`${message.author} a **unmute** ${member}`);
+            const embed = new EmbedBuilder().setColor(client.config.color).setDescription(`${message.author} a **unmute** ${member}`);
             logChannel.send({ embeds: [embed] });
         }
     }

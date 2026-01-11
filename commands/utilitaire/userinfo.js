@@ -18,7 +18,7 @@ module.exports = {
         const embed = new EmbedBuilder()
             .setAuthor({ name: user.tag, iconURL: user.displayAvatarURL({ dynamic: true }) })
             .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 512 }))
-            .setColor(config.color)
+            .setColor(client.config.color)
             .addFields(
                 { name: "🆔 ID", value: user.id, inline: true },
                 { name: "🏷️ Surnom", value: member.nickname || "Aucun", inline: true },

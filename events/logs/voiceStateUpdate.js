@@ -17,7 +17,7 @@ module.exports = async (client, oldState, newState) => {
     if (!oldState.channelId && newState.channelId) {
         const embed = new EmbedBuilder()
             .setAuthor({ name: member.user.username, iconURL: member.user.displayAvatarURL({ dynamic: true }) })
-            .setColor(config.color)
+            .setColor(client.config.color)
             .setDescription(`**${member}** se connecte au salon ${newState.channel}`)
             .setTimestamp();
         return logChannel.send({ embeds: [embed] }).catch(() => { });
@@ -26,7 +26,7 @@ module.exports = async (client, oldState, newState) => {
     if (oldState.channelId && !newState.channelId) {
         const embed = new EmbedBuilder()
             .setAuthor({ name: member.user.username, iconURL: member.user.displayAvatarURL({ dynamic: true }) })
-            .setColor(config.color)
+            .setColor(client.config.color)
             .setDescription(`**${member}** quitte le salon ${oldState.channel}`)
             .setTimestamp();
         return logChannel.send({ embeds: [embed] }).catch(() => { });
@@ -35,7 +35,7 @@ module.exports = async (client, oldState, newState) => {
     if (oldState.channelId && newState.channelId && oldState.channelId !== newState.channelId) {
         const embed = new EmbedBuilder()
             .setAuthor({ name: member.user.username, iconURL: member.user.displayAvatarURL({ dynamic: true }) })
-            .setColor(config.color)
+            .setColor(client.config.color)
             .setDescription(`**${member}** a changé de salon vocal.\n📤 **Avant:** ${oldState.channel}\n📥 **Après:** ${newState.channel}`)
             .setTimestamp();
         return logChannel.send({ embeds: [embed] }).catch(() => { });
@@ -44,7 +44,7 @@ module.exports = async (client, oldState, newState) => {
     if (!oldState.streaming && newState.streaming) {
         const embed = new EmbedBuilder()
             .setAuthor({ name: member.user.username, iconURL: member.user.displayAvatarURL({ dynamic: true }) })
-            .setColor(config.color)
+            .setColor(client.config.color)
             .setDescription(`**${member}** commence un partage d'écran dans ${newState.channel}`)
             .setTimestamp();
         return logChannel.send({ embeds: [embed] }).catch(() => { });
@@ -53,7 +53,7 @@ module.exports = async (client, oldState, newState) => {
     if (oldState.streaming && !newState.streaming) {
         const embed = new EmbedBuilder()
             .setAuthor({ name: member.user.username, iconURL: member.user.displayAvatarURL({ dynamic: true }) })
-            .setColor(config.color)
+            .setColor(client.config.color)
             .setDescription(`**${member}** a arrêté son partage d'écran dans ${newState.channel}`)
             .setTimestamp();
         return logChannel.send({ embeds: [embed] }).catch(() => { });

@@ -14,7 +14,7 @@ module.exports = {
 
         const embed = new EmbedBuilder()
             .setTitle(`Info salon: ${channel.name}`)
-            .setColor(config.color)
+            .setColor(client.config.color)
             .addFields(
                 { name: 'Nom', value: channel.name, inline: true },
                 { name: 'ID', value: channel.id, inline: true },

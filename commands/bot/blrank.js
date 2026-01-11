@@ -64,7 +64,7 @@ module.exports = {
 
                 return new EmbedBuilder()
                     .setTitle(`Blacklist Rank (${data.length})`)
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setDescription(description || "Erreur d'affichage")
                     .setFooter({ text: `Page ${curr + 1}/${maxPages}` });
             };

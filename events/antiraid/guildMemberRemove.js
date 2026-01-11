@@ -43,7 +43,7 @@ module.exports = async (client, member) => {
 
                 if (raidlog) {
                     const embed = new EmbedBuilder()
-                        .setColor(config.color)
+                        .setColor(client.config.color)
                         .setDescription(`<@${executor.id}> a expulsé trop de membres, il a été **${sanction}** !`);
                     raidlog.send({ embeds: [embed] }).catch(() => { });
                 }

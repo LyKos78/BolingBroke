@@ -29,7 +29,7 @@ module.exports = {
       const logChannel = message.guild.channels.cache.get(db.get(`logmod_${message.guild.id}`));
       if (logChannel) {
         const embed = new EmbedBuilder()
-          .setColor(config.color)
+          .setColor(client.config.color)
           .setDescription(`${message.author} a **kick** ${user.user.tag}\nRaison: ${reason}`)
           .setTimestamp();
         logChannel.send({ embeds: [embed] });

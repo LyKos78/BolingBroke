@@ -11,7 +11,7 @@ module.exports = {
         const getEmbed = () => {
             return new EmbedBuilder()
                 .setTitle("Configuration Vocaux Temporaires")
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .addFields(
                     { name: "Salon Hub", value: db.get(`jc_${message.guild.id}`) ? `<#${db.get(`jc_${message.guild.id}`)}>` : "❌", inline: true },
                     { name: "Catégorie", value: db.get(`catggg_${message.guild.id}`) ? `✅ Configuré` : "❌", inline: true },

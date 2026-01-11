@@ -16,7 +16,7 @@ module.exports = {
 
         const embed = new EmbedBuilder()
             .setAuthor({ name: user.username, iconURL: user.displayAvatarURL({ dynamic: true }) })
-            .setColor(config.color)
+            .setColor(client.config.color)
             .setDescription(`**${user.username}** a **${invites}** invitations.`);
 
         message.channel.send({ embeds: [embed] });

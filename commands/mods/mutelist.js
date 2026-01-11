@@ -25,7 +25,7 @@ module.exports = {
 
             return new EmbedBuilder()
                 .setTitle(`Membres Mutes (${mutedMembers.length})`)
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .setDescription(desc)
                 .setFooter({ text: `Page ${curr + 1}/${Math.ceil(mutedMembers.length / itemsPerPage)}` });
         };

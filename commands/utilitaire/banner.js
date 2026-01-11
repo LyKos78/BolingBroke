@@ -20,7 +20,7 @@ module.exports = {
             if (banner) {
                 const embed = new EmbedBuilder()
                     .setTitle(`Bannière de ${fetchedUser.username}`)
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setImage(banner);
                 message.channel.send({ embeds: [embed] });
             } else {

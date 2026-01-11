@@ -27,7 +27,7 @@ module.exports = {
 
             return new EmbedBuilder()
                 .setTitle(`Administrateurs (${list.size})`)
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .setDescription(desc || "Erreur d'affichage")
                 .setFooter({ text: `Page ${curr + 1}/${maxPages}` });
         };

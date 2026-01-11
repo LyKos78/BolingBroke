@@ -36,7 +36,7 @@ module.exports = {
 
             return new EmbedBuilder()
                 .setTitle("Récompenses d'invitations")
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .setDescription(desc)
                 .setFooter({ text: `Page ${curr + 1}/${Math.ceil(data.length / itemsPerPage)}` });
         };

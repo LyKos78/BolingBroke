@@ -36,13 +36,27 @@ client.cooldown = new Array();
 client.inter = [];
 
 const loadCommands = (dir = "./commands/") => {
+    let totalCommands = 0;
+    let loadedCount = 0;
+
+    try {
+        readdirSync(dir).forEach(dirs => {
+            const files = readdirSync(`${dir}/${dirs}/`).filter(files => files.endsWith(".js"));
+            totalCommands += files.length;
+        });
+    } catch (e) {
+    }
+
     try {
         readdirSync(dir).forEach(dirs => {
             const commands = readdirSync(`${dir}/${dirs}/`).filter(files => files.endsWith(".js"));
             for (const file of commands) {
                 const getFileName = require(`${dir}/${dirs}/${file}`);
                 client.commands.set(getFileName.name, getFileName);
-                console.log(`✅ Commande chargée : ${getFileName.name}`);
+                
+                loadedCount++;
+
+                console.log(`✅ Commande chargée : ${getFileName.name} [${loadedCount} / ${totalCommands}]`);
             }
         });
     } catch (e) {

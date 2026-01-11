@@ -9,7 +9,7 @@ module.exports = {
 
         const getEmbed = () => new EmbedBuilder()
             .setTitle("Configuration Levels")
-            .setColor(config.color)
+            .setColor(client.config.color)
             .addFields(
                 { name: "Salon", value: db.get(`levelchannel_${message.guild.id}`) ? `<#${db.get(`levelchannel_${message.guild.id}`)}>` : "❌", inline: true },
                 { name: "Message", value: db.get(`defaultLevelmessage_${message.guild.id}`) ? "Personnalisé" : "Par défaut", inline: true }

@@ -9,7 +9,7 @@ module.exports = {
 
         const getEmbed = () => new EmbedBuilder()
             .setTitle("Configuration Random Images")
-            .setColor(config.color)
+            .setColor(client.config.color)
             .addFields(
                 { name: "Salon PP", value: db.get(`randompp_${message.guild.id}`) ? `<#${db.get(`randompp_${message.guild.id}`)}>` : "❌", inline: true },
                 { name: "Salon Banner", value: db.get(`randombanner_${message.guild.id}`) ? `<#${db.get(`randombanner_${message.guild.id}`)}>` : "❌", inline: true },

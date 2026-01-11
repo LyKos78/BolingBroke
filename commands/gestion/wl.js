@@ -40,7 +40,7 @@ module.exports = {
 
             return new EmbedBuilder()
                 .setTitle("Liste Whitelist Serveur")
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .setDescription(desc)
                 .setFooter({ text: `Page ${curr + 1}/${Math.ceil(data.length / itemsPerPage)}` });
         };

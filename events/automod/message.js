@@ -89,7 +89,7 @@ module.exports = async (client, message) => {
 
             if (raidlog) {
                 const embed = new EmbedBuilder()
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setDescription(`${message.author} a été **mute** (Anti-Link)`);
                 raidlog.send({ embeds: [embed] }).catch(() => { });
             }
@@ -104,7 +104,7 @@ module.exports = async (client, message) => {
 
             if (raidlog) {
                 const embed = new EmbedBuilder()
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setDescription(`${message.author} a été **kick** (Anti-Link Spam)`);
                 raidlog.send({ embeds: [embed] }).catch(() => { });
             }
@@ -114,7 +114,7 @@ module.exports = async (client, message) => {
 
             if (raidlog) {
                 const embed = new EmbedBuilder()
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setDescription(`${message.author} a été **ban** (Anti-Link Spam)`);
                 raidlog.send({ embeds: [embed] }).catch(() => { });
             }

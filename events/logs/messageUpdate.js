@@ -17,7 +17,7 @@ module.exports = async (client, oldMessage, newMessage) => {
 
     const embed = new EmbedBuilder()
         .setAuthor({ name: oldMessage.author.username, iconURL: oldMessage.author.displayAvatarURL({ dynamic: true }) })
-        .setColor(config.color)
+        .setColor(client.config.color)
         .setDescription(`**Message édité dans** ${oldMessage.channel}`)
         .addFields(
             { name: "Avant", value: oldMessage.content || "*Aucun contenu texte (Image/Embed)*" },

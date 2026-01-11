@@ -30,7 +30,7 @@ module.exports = {
 
                 return new EmbedBuilder()
                     .setTitle(`Liste des bannis (${bans.size})`)
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setDescription(desc || "Aucune donnée")
                     .setFooter({ text: `Page ${curr + 1}/${Math.ceil(bans.size / itemsPerPage)}` });
             };

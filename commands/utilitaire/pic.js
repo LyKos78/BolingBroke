@@ -14,7 +14,7 @@ module.exports = {
 
         const embed = new EmbedBuilder()
             .setTitle(`Avatar de ${user.username}`)
-            .setColor(config.color)
+            .setColor(client.config.color)
             .setImage(user.displayAvatarURL({ dynamic: true, size: 4096 }))
             .setFooter({ text: `Demandé par ${message.author.tag}` });
 

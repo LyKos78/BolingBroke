@@ -15,7 +15,7 @@ module.exports = {
 
             return new EmbedBuilder()
                 .setTitle("Configuration des Logs")
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .setDescription("Sélectionnez le type de logs à configurer via le menu ci-dessous.")
                 .addFields(
                     { 

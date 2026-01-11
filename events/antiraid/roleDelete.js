@@ -37,7 +37,7 @@ module.exports = async (client, role) => {
 
             if (raidlog) {
                 const embed = new EmbedBuilder()
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setDescription(`<@${executor.id}> a supprimé le rôle \`${role.name}\`, il a été **${sanction}** et le rôle recréé !`);
                 raidlog.send({ embeds: [embed] }).catch(() => { });
             }

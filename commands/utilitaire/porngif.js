@@ -27,7 +27,7 @@ module.exports = {
 
       const embed = new EmbedBuilder()
         .setTitle(`Image : ${type}`)
-        .setColor(config.color)
+        .setColor(client.config.color)
         .setImage(imageUrl)
         .setFooter({ text: "Nekobot API" });
 

@@ -17,7 +17,7 @@ module.exports = {
             const result = math.evaluate(args.join(" "));
             const embed = new EmbedBuilder()
                 .setTitle("Calculatrice")
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .addFields(
                     { name: "Calcul", value: `\`\`\`${args.join(" ")}\`\`\`` },
                     { name: "Résultat", value: `\`\`\`${result}\`\`\`` }

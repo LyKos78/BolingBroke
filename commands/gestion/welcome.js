@@ -9,7 +9,7 @@ module.exports = {
 
         const getEmbed = () => new EmbedBuilder()
             .setTitle("Configuration Arrivées/Départs")
-            .setColor(config.color)
+            .setColor(client.config.color)
             .addFields(
                 { name: "Salon Join", value: db.get(`joinchannelmessage_${message.guild.id}`) ? `<#${db.get(`joinchannelmessage_${message.guild.id}`)}>` : "❌", inline: true },
                 { name: "Message Join", value: db.get(`joinmessageembed_${message.guild.id}`) ? "✅ Configuré" : "❌", inline: true },

@@ -18,7 +18,7 @@ module.exports = {
         const updateEmbed = () => {
             return new EmbedBuilder()
                 .setTitle("Configuration Bot")
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .setDescription(`
 **1・Changer le nom** : \`${client.user.username}\`
 **2・Changer l'avatar** : [Lien](${client.user.displayAvatarURL()})

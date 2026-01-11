@@ -44,7 +44,7 @@ module.exports = async (client, oldGuild, newGuild) => {
 
                 if (raidlog) {
                     const embed = new EmbedBuilder()
-                        .setColor(config.color)
+                        .setColor(client.config.color)
                         .setDescription(`<@${executor.id}> a modifié le serveur, il a été **${sanction}** et les modifications annulées !`);
                     raidlog.send({ embeds: [embed] }).catch(() => { });
                 }

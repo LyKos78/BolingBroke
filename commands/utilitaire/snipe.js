@@ -16,7 +16,7 @@ module.exports = {
     const embed = new EmbedBuilder()
       .setAuthor({ name: msg.author.tag, iconURL: msg.author.displayAvatarURL() })
       .setDescription(msg.content || "Image/Embed uniquement")
-      .setColor(config.color)
+      .setColor(client.config.color)
       .setFooter({ text: `Supprimé il y a ${Math.floor((Date.now() - msg.timestamp) / 1000)}s` });
 
     if (msg.image) embed.setImage(msg.image);

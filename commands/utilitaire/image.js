@@ -27,7 +27,7 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setTitle(`Recherche : ${query}`)
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .setImage(results[0].url)
                 .setFooter({ text: "Google Images" });
 

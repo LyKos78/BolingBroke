@@ -27,7 +27,7 @@ module.exports = {
 
             return new EmbedBuilder()
                 .setTitle(`Bots Administrateurs (${list.size})`)
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .setDescription(desc || "Erreur")
                 .setFooter({ text: `Page ${curr + 1}/${maxPages}` });
         };

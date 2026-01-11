@@ -14,7 +14,7 @@ module.exports = {
 
             return new EmbedBuilder()
                 .setTitle("Panneau Anti-Raid")
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .setDescription(`
 **Anti-MassBan:** ${state(`massban_${message.guild.id}`)} (Sanction: ${sanction(`massbansanction_${message.guild.id}`)})
 **Anti-Bot:** ${state(`bot_${message.guild.id}`)} (Sanction: ${sanction(`botsanction_${message.guild.id}`)})

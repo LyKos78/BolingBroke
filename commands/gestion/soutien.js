@@ -12,7 +12,7 @@ module.exports = {
             const status = db.get(`txtsupp_${message.guild.id}`);
             return new EmbedBuilder()
                 .setTitle("Configuration Soutien")
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .addFields(
                     { name: "Rôle", value: roleId ? `<@&${roleId}>` : "Non défini", inline: true },
                     { name: "Statut à avoir", value: status ? `\`${status}\`` : "Non défini", inline: true }

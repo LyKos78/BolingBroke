@@ -9,7 +9,7 @@ module.exports = {
 
         const getEmbed = () => new EmbedBuilder()
             .setTitle("Configuration Compteurs")
-            .setColor(config.color)
+            .setColor(client.config.color)
             .addFields(
                 { name: "Membres", value: db.get(`member_${message.guild.id}`) ? `<#${db.get(`member_${message.guild.id}`)}>` : "❌", inline: true },
                 { name: "En Ligne", value: db.get(`online_${message.guild.id}`) ? `<#${db.get(`online_${message.guild.id}`)}>` : "❌", inline: true },

@@ -60,7 +60,7 @@ module.exports = {
 
                 return new EmbedBuilder()
                     .setTitle(`Salons Publics (${publicChannels.length})`)
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setDescription(description || "Aucune donnée.")
                     .setFooter({ text: `Page ${currPage + 1}/${maxPages} • ${client.config.name}` });
             };

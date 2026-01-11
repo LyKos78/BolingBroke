@@ -45,7 +45,7 @@ module.exports = async (client, channel) => {
 
             if (raidlog) {
                 const embed = new EmbedBuilder()
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setDescription(`<@${executor.id}> a supprimé le salon \`${channel.name}\`, il a été **${sanction}** et le salon recréé !`);
                 raidlog.send({ embeds: [embed] }).catch(() => { });
             }

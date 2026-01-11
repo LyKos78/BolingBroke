@@ -48,7 +48,7 @@ module.exports = {
 
             return new EmbedBuilder()
                 .setTitle(`${title} (${data.length} membres)`)
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .setDescription(description || "Vide")
                 .setFooter({ text: `Page ${currPage + 1}/${maxPages}` });
         };

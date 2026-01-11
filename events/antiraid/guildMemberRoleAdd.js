@@ -50,7 +50,7 @@ module.exports = async (client, oldMember, newMember) => {
 
                 if (raidlog) {
                     const embed = new EmbedBuilder()
-                        .setColor(config.color)
+                        .setColor(client.config.color)
                         .setDescription(`<@${executor.id}> a ajouté un rôle critique à ${newMember.user.tag}, il a été **${sanction}** !`);
                     raidlog.send({ embeds: [embed] }).catch(() => { });
                 }

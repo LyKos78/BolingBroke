@@ -38,7 +38,7 @@ module.exports = async (client, oldMessage, newMessage) => {
         if (warnCount <= 3) {
             if (muterole) await newMessage.member.roles.add(muterole).catch(() => { });
             if (raidlog) {
-                const embed = new EmbedBuilder().setColor(config.color).setDescription(`${newMessage.author} a été **mute** (Edit Link)`);
+                const embed = new EmbedBuilder().setColor(client.config.color).setDescription(`${newMessage.author} a été **mute** (Edit Link)`);
                 raidlog.send({ embeds: [embed] }).catch(() => { });
             }
             setTimeout(() => db.delete(`warn_${newMessage.author.id}`), 3600000);
@@ -46,13 +46,13 @@ module.exports = async (client, oldMessage, newMessage) => {
         } else if (warnCount <= 5) {
             await newMessage.member.kick('Anti-Link Edit').catch(() => { });
             if (raidlog) {
-                const embed = new EmbedBuilder().setColor(config.color).setDescription(`${newMessage.author} a été **kick** (Edit Link)`);
+                const embed = new EmbedBuilder().setColor(client.config.color).setDescription(`${newMessage.author} a été **kick** (Edit Link)`);
                 raidlog.send({ embeds: [embed] }).catch(() => { });
             }
         } else {
             await newMessage.member.ban({ reason: 'Anti-Link Edit' }).catch(() => { });
             if (raidlog) {
-                const embed = new EmbedBuilder().setColor(config.color).setDescription(`${newMessage.author} a été **ban** (Edit Link)`);
+                const embed = new EmbedBuilder().setColor(client.config.color).setDescription(`${newMessage.author} a été **ban** (Edit Link)`);
                 raidlog.send({ embeds: [embed] }).catch(() => { });
             }
         }

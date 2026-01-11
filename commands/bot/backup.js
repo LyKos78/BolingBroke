@@ -36,7 +36,7 @@ module.exports = {
 
             const embed = new EmbedBuilder()
                 .setTitle("Vos Backups")
-                .setColor(config.color)
+                .setColor(client.config.color)
                 .setDescription(backups.map((b, i) => `${i + 1}) **${b.name}** - \`${b.id}\``).join("\n"));
 
             message.channel.send({ embeds: [embed] });

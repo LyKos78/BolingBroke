@@ -20,7 +20,7 @@ module.exports = async (client, message) => {
 
     const embed = new EmbedBuilder()
         .setAuthor({ name: message.author.username, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
-        .setColor(config.color)
+        .setColor(client.config.color)
         .setDescription(`**Message supprimé dans** ${message.channel}\n\n${message.content || "*Aucun contenu texte*"}`)
         .setTimestamp();
 

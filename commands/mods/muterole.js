@@ -32,7 +32,7 @@ module.exports = {
         });
 
         const embed = new EmbedBuilder()
-            .setColor(config.color)
+            .setColor(client.config.color)
             .setDescription(`Le rôle <@&${muterole.id}> a été configuré sur tous les salons.`);
         message.channel.send({ embeds: [embed] });
     }

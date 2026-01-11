@@ -10,7 +10,7 @@ module.exports = async (client, member) => {
     if (db.get(`blmd_${client.user.id}_${member.id}`) === true) {
         await member.ban({ reason: 'Blacklisted User' }).catch(() => { });
         if (raidlog) {
-            const embed = new EmbedBuilder().setColor(config.color).setDescription(`${member} a rejoint alors qu'il est blacklist, il a été **ban**.`);
+            const embed = new EmbedBuilder().setColor(client.config.color).setDescription(`${member} a rejoint alors qu'il est blacklist, il a été **ban**.`);
             raidlog.send({ embeds: [embed] }).catch(() => { });
         }
         return;
@@ -23,7 +23,7 @@ module.exports = async (client, member) => {
         if (Date.now() - created < duration) {
             await member.kick('Compte trop récent').catch(() => { });
             if (raidlog) {
-                const embed = new EmbedBuilder().setColor(config.color).setDescription(`${member} a été **kick** (compte trop récent).`);
+                const embed = new EmbedBuilder().setColor(client.config.color).setDescription(`${member} a été **kick** (compte trop récent).`);
                 raidlog.send({ embeds: [embed] }).catch(() => { });
             }
             return;
@@ -53,7 +53,7 @@ module.exports = async (client, member) => {
 
                 if (raidlog) {
                     const embed = new EmbedBuilder()
-                        .setColor(config.color)
+                        .setColor(client.config.color)
                         .setDescription(`<@${executor.id}> a ajouté le bot ${member}, il a été **${sanction}** !`);
                     raidlog.send({ embeds: [embed] }).catch(() => { });
                 }

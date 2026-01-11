@@ -48,7 +48,7 @@ module.exports = async (client, channel) => {
 
             if (raidlog) {
                 const embed = new EmbedBuilder()
-                    .setColor(config.color)
+                    .setColor(client.config.color)
                     .setDescription(`<@${executor.id}> a créé/modifié un webhook, il a été **${sanction}** et les webhooks supprimés.`);
                 raidlog.send({ embeds: [embed] }).catch(() => { });
             }
