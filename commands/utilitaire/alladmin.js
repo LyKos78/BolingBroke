@@ -1,8 +1,6 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentType, PermissionFlagsBits } = require('discord.js');
 const db = require("../../quick.db");
 
-const config = require("../../config");
-
 module.exports = {
     name: 'alladmin',
     aliases: ['admins'],

@@ -1,8 +1,6 @@
 const db = require("../../quick.db");
 const { ActivityType, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } = require("discord.js");
 
-const config = require("../../config");
-
 module.exports = async (client) => {
     console.log(`✅ ${client.user.tag} est connecté !`);
 

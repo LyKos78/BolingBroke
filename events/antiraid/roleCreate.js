@@ -1,8 +1,6 @@
 const db = require("../../quick.db");
 const { EmbedBuilder, AuditLogEvent } = require("discord.js");
 
-const config = require("../../config");
-
 module.exports = async (client, role) => {
     const guild = role.guild;
     const audit = await guild.fetchAuditLogs({ limit: 1, type: AuditLogEvent.RoleCreate });

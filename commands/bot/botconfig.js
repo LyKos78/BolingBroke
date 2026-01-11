@@ -1,8 +1,6 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ActivityType, ComponentType } = require('discord.js');
 const db = require("../../quick.db");
 
-const config = require("../../config");
-
 module.exports = {
     name: 'botconfig',
     aliases: ["setprofil"],

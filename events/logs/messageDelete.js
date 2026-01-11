@@ -1,8 +1,6 @@
 const db = require("../../quick.db");
 const { EmbedBuilder } = require("discord.js");
 
-const config = require("../../config");
-
 module.exports = async (client, message) => {
 
     if (message.partial || (message.author && message.author.bot) || !message.guild) return;

@@ -2,8 +2,6 @@ const { EmbedBuilder, PermissionFlagsBits } = require("discord.js");
 const db = require("../../quick.db");
 const ms = require("ms");
 
-const config = require("../../config");
-
 module.exports = {
     name: 'mute',
     aliases: [],

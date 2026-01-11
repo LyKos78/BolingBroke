@@ -2,8 +2,6 @@ const { EmbedBuilder } = require('discord.js');
 const db = require("../../quick.db");
 const GoogleImages = require('images-scraper');
 
-const config = require("../../config");
-
 const google = new GoogleImages({
     puppeteer: { headless: true }
 });

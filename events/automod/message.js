@@ -2,8 +2,6 @@ const db = require("../../quick.db");
 const { EmbedBuilder, PermissionFlagsBits } = require("discord.js");
 const random_string = require("randomstring");
 
-const config = require("../../config");
-
 module.exports = async (client, message) => {
 
     if (!message.guild || message.author.bot) return;

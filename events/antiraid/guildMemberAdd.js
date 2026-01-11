@@ -2,8 +2,6 @@ const db = require("../../quick.db");
 const { EmbedBuilder, AuditLogEvent } = require("discord.js");
 const ms = require("ms");
 
-const config = require("../../config");
-
 module.exports = async (client, member) => {
     const guild = member.guild;
     const color = db.get(`color_${guild.id}`) || client.config.color;

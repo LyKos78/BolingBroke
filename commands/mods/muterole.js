@@ -1,8 +1,6 @@
 const { EmbedBuilder, PermissionFlagsBits } = require("discord.js");
 const db = require("../../quick.db");
 
-const config = require("../../config");
-
 module.exports = {
     name: 'muterole',
     run: async (client, message, args, prefix, color) => {

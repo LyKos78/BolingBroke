@@ -1,8 +1,6 @@
 const { EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder, ComponentType } = require('discord.js');
 const db = require("../../quick.db");
 
-const config = require("../../config");
-
 module.exports = {
     name: 'levels',
     run: async (client, message, args, prefix, color) => {

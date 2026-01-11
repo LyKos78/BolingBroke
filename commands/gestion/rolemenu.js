@@ -1,8 +1,6 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const db = require("../../quick.db");
 
-const config = require("../../config");
-
 module.exports = {
     name: 'rolemenu',
     run: async (client, message, args, prefix, color) => {

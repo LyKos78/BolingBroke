@@ -2,8 +2,6 @@ const db = require("../../quick.db");
 const { EmbedBuilder, AuditLogEvent } = require("discord.js");
 const ms = require("ms");
 
-const config = require("../../config");
-
 const kickCounts = new Map();
 
 module.exports = async (client, member) => {

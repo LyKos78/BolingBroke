@@ -2,8 +2,6 @@ const { EmbedBuilder } = require('discord.js');
 const db = require("../../quick.db");
 const axios = require('axios');
 
-const config = require("../../config");
-
 module.exports = {
   name: 'porngif',
   aliases: ["pgif"],

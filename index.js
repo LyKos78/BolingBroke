@@ -27,7 +27,8 @@ const client = new Client({
 });
 
 
-client.invites = new collections();
+client.invites = new Collection();
+client.guildInvites = new Collection();
 client.config = config;
 client.commands = new Collection();
 client.aliases = new Collection();

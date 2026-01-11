@@ -2,8 +2,6 @@ const { EmbedBuilder } = require('discord.js');
 const math = require('mathjs');
 const db = require("../../quick.db");
 
-const config = require("../../config");
-
 module.exports = {
     name: 'calc',
     aliases: [],

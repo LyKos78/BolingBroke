@@ -1,8 +1,6 @@
 const db = require("../../quick.db");
 const { EmbedBuilder, AuditLogEvent } = require("discord.js");
 
-const config = require("../../config");
-
 module.exports = async (client, oldGuild, newGuild) => {
     try {
         const guild = newGuild;

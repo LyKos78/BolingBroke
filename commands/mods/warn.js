@@ -2,8 +2,6 @@ const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentTyp
 const db = require("../../quick.db");
 const random_string = require("randomstring");
 
-const config = require("../../config");
-
 module.exports = {
     name: 'warn',
     aliases: ["sanctions"],

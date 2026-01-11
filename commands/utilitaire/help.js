@@ -1,8 +1,6 @@
 const { EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder, ComponentType } = require('discord.js');
 const db = require("../../quick.db");
 
-const config = require("../../config.json");
-
 module.exports = {
     name: 'help',
     aliases: ["h"],
@@ -58,7 +56,7 @@ module.exports = {
 
         const getEmbed = (categoryKey) => {
             const embed = new EmbedBuilder()
-                .setColor(config.color)
+                .setColor(client.config.color) // Correction ici
                 .setTitle(`Menu d'aide - ${client.user.username}`)
                 .setFooter({ text: `Demandé par ${message.author.tag}`, iconURL: message.author.displayAvatarURL() });
 
