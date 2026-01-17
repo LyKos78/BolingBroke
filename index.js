@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { Client, GatewayIntentBits, Partials, Collection } = require('discord.js');
 const { readdirSync } = require('fs');
 const config = require('./config.json');
@@ -53,7 +54,7 @@ const loadCommands = (dir = "./commands/") => {
             for (const file of commands) {
                 const getFileName = require(`${dir}/${dirs}/${file}`);
                 client.commands.set(getFileName.name, getFileName);
-                
+
                 loadedCount++;
 
                 console.log(`✅ Commande chargée : ${getFileName.name} [${loadedCount} / ${totalCommands}]`);
@@ -90,6 +91,6 @@ process.on("uncaughtException", err => {
     console.error("Uncaught Exception: ", err);
 });
 
-console.log("Token lu :", client.config.token ? "Oui (Commence par " + client.config.token.substring(0, 5) + "...)" : "Non (Undefined)");
+console.log("Token lu :", process.env.TOKEN ? "Oui (Commence par " + process.env.TOKEN.substring(0, 5) + "...)" : "Non (Undefined)");
 
-client.login(client.config.token);
+client.login(process.env.TOKEN);
